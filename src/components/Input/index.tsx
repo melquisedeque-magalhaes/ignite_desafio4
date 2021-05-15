@@ -3,7 +3,6 @@ import {
   useRef,
   useState,
   useCallback,
-  ReactElement,
 } from 'react';
 
 import { useField } from '@unform/core';
@@ -48,6 +47,7 @@ const Input = ({ name, Icon, ...rest }: InputProps) => {
       {Icon && <Icon size={20} />}
 
       <input
+        {...rest}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
